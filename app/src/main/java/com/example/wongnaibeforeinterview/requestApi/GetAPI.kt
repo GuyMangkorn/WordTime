@@ -15,7 +15,7 @@ interface SideAPI {
 
 interface TownAPI {
     @GET("{side}")
-    suspend fun getTownData(
+     fun getTownData(
             @Path("side") side: String
     ) : Call<TimeObject>
 

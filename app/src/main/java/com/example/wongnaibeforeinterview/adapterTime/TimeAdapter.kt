@@ -9,11 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wongnaibeforeinterview.R
 
 
-class TimeAdapter (private val context:Context,private val result:ArrayList<String>) : RecyclerView.Adapter<TimeAdapter.Holder>(){
+class TimeAdapter (private val context:Context,private val result:ArrayList<TimeObject>) : RecyclerView.Adapter<TimeAdapter.Holder>(){
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private val timeText:TextView = itemView.findViewById(R.id.timeText)
         fun set(position: Int){
-            timeText.text = result[position]
+            timeText.text = result[position].utc_datetime
         }
 
     }
