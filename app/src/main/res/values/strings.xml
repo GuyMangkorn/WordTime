@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WongnaiBeforeInterview</string>
+    <string name="home_menu">Home</string>
+    <string name="list_menu">List</string>
+    <string name="tab_menu">Tab</string>
+    <string name="asia">Asia</string>
+    <string name="europe">Europe</string>
+    <string name="america">America</string>
+    <string name="africa">Africa</string>
+</resources>
