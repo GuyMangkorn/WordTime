@@ -4,6 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.wongnaibeforeinterview.adapterTime.TimeObject
 import com.example.wongnaibeforeinterview.requestApi.SideAPI
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 import retrofit2.Call
 
 class TimeRepository{
@@ -11,12 +14,14 @@ class TimeRepository{
     fun fetchTimeSide(side:String) : LiveData<ArrayList<String>>{
         Log.d("TAG_REQUEST",side)
         dataSource = TimeDataSource()
-        dataSource.timeSideDataSource(side)
+        //dataSource.timeSideDataSource(side)
         return  dataSource.arrResponse
     }
     fun fetTimeDetailData(side:String) : LiveData<ArrayList<TimeObject>>{
         dataSource = TimeDataSource()
-        dataSource.timeSideDataSource(side)
+        CoroutineScope(IO).launch {
+            dataSource.timeSideDataSource(side)
+        }
         return  dataSource.arrDataResponse
 
     }

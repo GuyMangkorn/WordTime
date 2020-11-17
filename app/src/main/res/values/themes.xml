@@ -6,8 +6,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-
-
     <style name="Theme.MaterialComponents.PinkStyle">
         <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
         <item name="colorPrimary">#FFFFFF</item>
